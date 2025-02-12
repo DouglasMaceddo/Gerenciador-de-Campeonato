@@ -1,0 +1,14 @@
+<div class="container">
+  <button (click)="voltarHome('Home')">Voltar</button>
+  <h2>Campeonatos Criados</h2>
+
+  <div class="cards-container">
+    <div *ngFor="let campeonato of campeonatos" class="card">
+      <h4>{{ campeonato.nome }}</h4>
+    </div>
+  </div>
+
+  <div *ngIf="campeonatos.length === 0">
+    <p>Nenhum campeonato criado ainda.</p>
+  </div>
+</div>
