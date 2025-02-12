@@ -1,0 +1,21 @@
+.perfil-container {
+    background-color: #2d6a4f;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+button {
+    background-color: #52b788; /* Verde Claro */
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+}
