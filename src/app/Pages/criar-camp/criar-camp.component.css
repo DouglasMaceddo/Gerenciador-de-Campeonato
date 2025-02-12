@@ -1,0 +1,110 @@
+.criar-campeonato {
+    padding: 20px;
+    background-color: #2d6a4f; /* Cor de fundo do container */
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo do formulário */
+  .form {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Label */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Inputs, Textareas e Select */
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+  }
+  
+  select {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  textarea {
+    min-height: 100px;
+    resize: vertical; /* Permite redimensionar apenas na vertical */
+  }
+  
+  /* Botão */
+  button {
+    padding: 10px 20px;
+    background-color: #52b788;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #40916c;
+  }
+  
+  /* Estilo do campeonato criado */
+  .campeonato-criado {
+    margin-top: 20px;
+    background-color: #e7f7d9;
+    color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .campeonato-criado h2 {
+    color: #2d6a4f;
+    font-size: 2rem;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .form {
+      align-items: center;
+    }
+  
+    input,
+    select,
+    textarea {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
