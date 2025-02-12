@@ -1,14 +1,33 @@
 <div class="container">
-  <button (click)="voltarHome('Home')">Voltar</button>
-  <h2>Campeonatos Criados</h2>
+  <button (click)="voltarHome()">Voltar</button>
+  
+  <h2>{{ campeonato?.nome }}</h2>
+  <div *ngIf="campeonato">
+    <p><strong>Descrição:</strong> {{ campeonato.descricao}}</p>
+    <p><strong>Formato:</strong> {{ campeonato.formato }}</p>
+    <p><strong>Número de Times:</strong> {{ campeonato.numTimes }}</p>
 
-  <div class="cards-container">
-    <div *ngFor="let campeonato of campeonatos" class="card">
-      <h4>{{ campeonato.nome }}</h4>
+    <div *ngIf="campeonato.times && campeonato.times.length > 0">
+      <h3>Times no Campeonato</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome do Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let time of campeonato.times; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ time.nome }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button (click)="marcarJogos()">Marcar Jogos</button>
     </div>
-  </div>
 
-  <div *ngIf="campeonatos.length === 0">
-    <p>Nenhum campeonato criado ainda.</p>
+    <div *ngIf="!campeonato.times || campeonato.times.length === 0">
+      <p>Nenhum time foi adicionado ainda.</p>
+    </div>
   </div>
 </div>
