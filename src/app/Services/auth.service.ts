@@ -27,11 +27,10 @@ export class AuthService {
     const user = users.find((user: any) => user.email === email && user.password === password);
 
     if (user) {
-      // Salvar usuário logado
       localStorage.setItem('loggedInUser', JSON.stringify(user));
-      return true;  // Login bem-sucedido
+      return true;
     } else {
-      return false;  // E-mail ou senha incorretos
+      return false;
     }
   }
 
