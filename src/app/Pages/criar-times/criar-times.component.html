@@ -1,0 +1,21 @@
+<div class="criar-time">
+  <header>
+    <button (click)="voltarHome('Perfil')">Voltar</button>
+  </header>
+
+  <h1>Criar Time</h1>
+
+  <div class="form">
+    <label for="nomeTime">Nome do Time:</label>
+    <input type="text" id="nomeTime" [(ngModel)]="nomeTime" placeholder="Nome do Time" />
+
+    <label for="logoUrl">URL do Logo:</label>
+    <input type="text" id="logoUrl" [(ngModel)]="logoUrl" placeholder="URL do Logo" />
+
+    <label for="jogadores">Jogadores:</label>
+    <input type="text" id="jogadores" [(ngModel)]="jogadores" placeholder="Jogadores (separados por vírgula)" />
+
+
+    <button (click)="adicionarTime()">Adicionar Time</button>
+  </div>
+</div>
