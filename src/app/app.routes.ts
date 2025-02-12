@@ -7,27 +7,32 @@ import { LoginComponent } from './Pages/login/login.component';
 import { CadastrarComponent } from './Pages/login/cadastrar/cadastrar.component';
 import { AuthGuard } from './Services/auth-guard.service';
 import { PerfilComponent } from './Pages/perfil/perfil.component';
+import { CriarTimesComponent } from './Pages/criar-times/criar-times.component';
 
 export const routes: Routes = [
-    { 
+    {
         path: '',
         component: HomeComponent
     },
-    { 
+    {
         path: 'Home',
         component: HomeComponent
     },
     {
-         path: 'Peladeiros', 
-         component: PeladeirosComponent
+        path: 'Peladeiros',
+        component: PeladeirosComponent
     },
     {
-        path:'Criar_Campeonato',
-        component:CriarCampComponent,
+        path: 'Criar_Campeonato',
+        component: CriarCampComponent,
         canActivate: [AuthGuard]
     },
     {
-        path: 'Visualizar_Campeonato',
+        path:'Criar_Times',
+        component:CriarTimesComponent,
+    },
+    {
+        path: 'Visualizar_Campeonato/:id',
         component: VisualizarCampComponent
     },
     {
