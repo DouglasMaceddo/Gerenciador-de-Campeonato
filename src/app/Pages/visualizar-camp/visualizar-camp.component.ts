@@ -45,6 +45,9 @@ export class VisualizarCampComponent implements OnInit {
     }
   }
 
+  adicionartimes() {
+    this.router.navigate(['/Criar_Times']);
+  }
   voltarHome() {
     this.router.navigate(['/Home']);
   }

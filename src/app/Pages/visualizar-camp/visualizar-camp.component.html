@@ -1,6 +1,6 @@
 <div class="container">
   <button (click)="voltarHome()">Voltar</button>
-  
+
   <h2>{{ campeonato?.nome }}</h2>
   <div *ngIf="campeonato">
     <p><strong>Descrição:</strong> {{ campeonato.descricao}}</p>
@@ -23,9 +23,10 @@
           </tr>
         </tbody>
       </table>
+
       <button (click)="marcarJogos()">Marcar Jogos</button>
     </div>
-
+    <button (click)="adicionartimes()">Adicionar Times</button>
     <div *ngIf="!campeonato.times || campeonato.times.length === 0">
       <p>Nenhum time foi adicionado ainda.</p>
     </div>

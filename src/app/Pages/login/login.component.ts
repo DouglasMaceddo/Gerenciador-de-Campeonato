@@ -3,6 +3,7 @@ import { AuthService } from '../../Services/auth.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { routes } from '../../app.routes';
 
 @Component({
   selector: 'app-login',
@@ -33,5 +34,9 @@ export class LoginComponent {
 
   cadastro(){
     this.router.navigate(['Cadastro'])
+  }
+
+  voltarHome(route : String){
+    this.router.navigate([route])
   }
 }

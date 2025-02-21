@@ -44,7 +44,6 @@ export class CriarTimesComponent {
         }
         campeonato.times.push(time);
         localStorage.setItem('campeonatos', JSON.stringify(campeonatos));
-        this.router.navigate([`/visualizar-camp/${this.campeonatoId}`]);  // Voltar para a tela do campeonato após adicionar o time
       } else {
         alert('Campeonato não encontrado');
       }
